@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		A610CF3522CDF48800A27370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A610CF3422CDF48800A27370 /* AppDelegate.swift */; };
-		A610CF3722CDF48800A27370 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A610CF3622CDF48800A27370 /* ViewController.swift */; };
+		A610CF3722CDF48800A27370 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A610CF3622CDF48800A27370 /* ReviewViewController.swift */; };
 		A610CF3A22CDF48800A27370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A610CF3822CDF48800A27370 /* Main.storyboard */; };
 		A610CF3C22CDF48900A27370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A610CF3B22CDF48900A27370 /* Assets.xcassets */; };
 		A610CF3F22CDF48900A27370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A610CF3D22CDF48900A27370 /* LaunchScreen.storyboard */; };
+		A610CF4722CDF5BD00A27370 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A610CF4622CDF5BD00A27370 /* API.swift */; };
+		A610CF4922CDF6E700A27370 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A610CF4822CDF6E700A27370 /* Constants.swift */; };
+		A610CF4C22CDF74E00A27370 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A610CF4B22CDF74E00A27370 /* Review.swift */; };
+		A610CF4E22CDFF2D00A27370 /* ReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A610CF4D22CDFF2D00A27370 /* ReviewResponse.swift */; };
+		A610CF5122CE060200A27370 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A610CF5022CE060200A27370 /* ReviewCell.swift */; };
+		A6C28D7C22CE5C46006DEBD0 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C28D7B22CE5C46006DEBD0 /* SortViewController.swift */; };
+		F70B31066F2D78154DE3AA91 /* Pods_BerlinTourReview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A74166548C25AEEE23287B0 /* Pods_BerlinTourReview.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1732E5EAA1EF651AA9B456CB /* Pods-BerlinTourReview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BerlinTourReview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BerlinTourReview/Pods-BerlinTourReview.debug.xcconfig"; sourceTree = "<group>"; };
+		4019CC14CBB11453F45F4639 /* Pods-BerlinTourReview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BerlinTourReview.release.xcconfig"; path = "Pods/Target Support Files/Pods-BerlinTourReview/Pods-BerlinTourReview.release.xcconfig"; sourceTree = "<group>"; };
+		6A74166548C25AEEE23287B0 /* Pods_BerlinTourReview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BerlinTourReview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A610CF3122CDF48800A27370 /* BerlinTourReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinTourReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A610CF3422CDF48800A27370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A610CF3622CDF48800A27370 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A610CF3622CDF48800A27370 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		A610CF3922CDF48800A27370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A610CF3B22CDF48900A27370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A610CF3E22CDF48900A27370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A610CF4022CDF48900A27370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A610CF4622CDF5BD00A27370 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A610CF4822CDF6E700A27370 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A610CF4B22CDF74E00A27370 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		A610CF4D22CDFF2D00A27370 /* ReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResponse.swift; sourceTree = "<group>"; };
+		A610CF5022CE060200A27370 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		A6C28D7B22CE5C46006DEBD0 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70B31066F2D78154DE3AA91 /* Pods_BerlinTourReview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +57,8 @@
 			children = (
 				A610CF3322CDF48800A27370 /* BerlinTourReview */,
 				A610CF3222CDF48800A27370 /* Products */,
+				C491867983402DF5C957C025 /* Pods */,
+				AABFDF164874031C248E69BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,61 @@
 		A610CF3322CDF48800A27370 /* BerlinTourReview */ = {
 			isa = PBXGroup;
 			children = (
+				A610CF4F22CE05E900A27370 /* View */,
+				A610CF4A22CDF73D00A27370 /* Model */,
+				A632E84122CEDC480004ACA8 /* Network */,
 				A610CF3422CDF48800A27370 /* AppDelegate.swift */,
-				A610CF3622CDF48800A27370 /* ViewController.swift */,
 				A610CF3822CDF48800A27370 /* Main.storyboard */,
 				A610CF3B22CDF48900A27370 /* Assets.xcassets */,
 				A610CF3D22CDF48900A27370 /* LaunchScreen.storyboard */,
 				A610CF4022CDF48900A27370 /* Info.plist */,
 			);
 			path = BerlinTourReview;
+			sourceTree = "<group>";
+		};
+		A610CF4A22CDF73D00A27370 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A610CF4B22CDF74E00A27370 /* Review.swift */,
+				A610CF4D22CDFF2D00A27370 /* ReviewResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A610CF4F22CE05E900A27370 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A610CF5022CE060200A27370 /* ReviewCell.swift */,
+				A610CF3622CDF48800A27370 /* ReviewViewController.swift */,
+				A6C28D7B22CE5C46006DEBD0 /* SortViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A632E84122CEDC480004ACA8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A610CF4622CDF5BD00A27370 /* API.swift */,
+				A610CF4822CDF6E700A27370 /* Constants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AABFDF164874031C248E69BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A74166548C25AEEE23287B0 /* Pods_BerlinTourReview.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C491867983402DF5C957C025 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1732E5EAA1EF651AA9B456CB /* Pods-BerlinTourReview.debug.xcconfig */,
+				4019CC14CBB11453F45F4639 /* Pods-BerlinTourReview.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A610CF4322CDF48900A27370 /* Build configuration list for PBXNativeTarget "BerlinTourReview" */;
 			buildPhases = (
+				F20435385354434A9CA3F396 /* [CP] Check Pods Manifest.lock */,
 				A610CF2D22CDF48800A27370 /* Sources */,
 				A610CF2E22CDF48800A27370 /* Frameworks */,
 				A610CF2F22CDF48800A27370 /* Resources */,
+				5000D6B70AC4089B25BFCADC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +198,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5000D6B70AC4089B25BFCADC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BerlinTourReview/Pods-BerlinTourReview-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BerlinTourReview/Pods-BerlinTourReview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F20435385354434A9CA3F396 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BerlinTourReview-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A610CF2D22CDF48800A27370 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A610CF3722CDF48800A27370 /* ViewController.swift in Sources */,
+				A610CF4E22CDFF2D00A27370 /* ReviewResponse.swift in Sources */,
+				A610CF4C22CDF74E00A27370 /* Review.swift in Sources */,
+				A6C28D7C22CE5C46006DEBD0 /* SortViewController.swift in Sources */,
+				A610CF3722CDF48800A27370 /* ReviewViewController.swift in Sources */,
+				A610CF4722CDF5BD00A27370 /* API.swift in Sources */,
 				A610CF3522CDF48800A27370 /* AppDelegate.swift in Sources */,
+				A610CF4922CDF6E700A27370 /* Constants.swift in Sources */,
+				A610CF5122CE060200A27370 /* ReviewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +403,7 @@
 		};
 		A610CF4422CDF48900A27370 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1732E5EAA1EF651AA9B456CB /* Pods-BerlinTourReview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +422,7 @@
 		};
 		A610CF4522CDF48900A27370 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4019CC14CBB11453F45F4639 /* Pods-BerlinTourReview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
