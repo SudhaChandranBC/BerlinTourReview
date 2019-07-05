@@ -24,6 +24,7 @@ $ open BerlinTourReview.xcworkspace
 Third party libraries used:
 
 Alamofire: An HTTP networking library.
+
 SVProgressHUD: A clean and easy-to-use HUD meant to display the progress of an ongoing task on iOS.
 
 
