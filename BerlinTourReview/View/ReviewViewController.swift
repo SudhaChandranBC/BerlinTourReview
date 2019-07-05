@@ -18,8 +18,8 @@ class ReviewViewController: UIViewController {
     var maxPages = 0
     var reviewItems = [Review]()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var errorView: UIView!
 
-    
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSortOptions" {
@@ -30,6 +30,7 @@ class ReviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showErrorView(false)
         SVProgressHUD.show()
         getReviewItems()
         self.currentPage = (ReviewAPI.sharedInstance.selectedReviewOptions.page)
@@ -44,8 +45,9 @@ class ReviewViewController: UIViewController {
             response, error in
             
             if error != nil {
+                self.tableView.reloadData()
+                self.showErrorView(true)
                 SVProgressHUD.dismiss()
-                self.showErrorAlert(errorInfo: error!)
                 return
             }
             
@@ -58,8 +60,9 @@ class ReviewViewController: UIViewController {
                 self.tableView.isUserInteractionEnabled = true
                 self.reviewItems.append(contentsOf: reviewResponse.data)
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self.showErrorView(false)
                     SVProgressHUD.dismiss()
+                    self.tableView.reloadData()
                 }
             }
         }
@@ -74,6 +77,14 @@ class ReviewViewController: UIViewController {
         alert.addAction(UIAlertAction(title: ErrorConstants.OkActionText, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    /// Function which displays or hides error view
+    /// - parameters:
+    ///     - show: Bool variable
+    private func showErrorView(_ shouldShow: Bool)  {
+        self.errorView.isHidden = !shouldShow
+    }
+    
 }
 
 
@@ -94,26 +105,16 @@ extension ReviewViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as! ReviewCell
         
-        if (indexPath.row != self.reviewItems.count) {
+        if reviewItems.count > 0 {
+            let  item = reviewItems[indexPath.row]
+            cell.reviewerNameLabel.text = String(item.name!)
+            cell.revieweDateLabel.text = String(item.reviewDate!)
+            let stars = String(repeating: "★ ", count: Int(Float(item.rating!)!) )
+            cell.ratingLabel.text = stars
+            cell.reviewMessageLabel.text = item.message
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as! ReviewCell
-            
-            if reviewItems.count > 0 {
-                let  item = reviewItems[indexPath.row]
-                cell.reviewerNameLabel.text = String(item.name!)
-                cell.revieweDateLabel.text = String(item.reviewDate!)
-                let stars = String(repeating: "★ ", count: Int(Float(item.rating!)!) )
-                cell.ratingLabel.text = "\(item.rating!):\(stars)"
-                cell.reviewMessageLabel.text = item.message
-
-            }
-            return cell
-        }
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LoadingCell", for: indexPath)
-        if reviewItems.count == 0 {
-            cell.textLabel?.text = "Sorry no items found!"
         }
         return cell
     }
@@ -141,7 +142,9 @@ extension ReviewViewController: SortViewControllerProtocol {
     func didSelectSortOption()
     {
         _ = self.navigationController?.popViewController(animated: true)
+        self.showErrorView(false)
         reviewItems.removeAll()
+        tableView.reloadData()
         SVProgressHUD.show()
         self.getReviewItems()
     }
